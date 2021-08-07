@@ -17,8 +17,9 @@ rcodeHighlightDeps <- function() {
       includeScript(file.path(src, "yaml.min.js")),
       includeCSS(file.path(src, "highlight-theme.css"))
     )),
-    tags$script(
-      "Shiny.addCustomMessageHandler(
+    singleton(list(
+      tags$script(
+        "Shiny.addCustomMessageHandler(
            'highlight-rcode',
            function (message) {
                var id = message['id'];
@@ -32,7 +33,8 @@ rcodeHighlightDeps <- function() {
                );
            }
        );"
-    )
+      )
+    ))
   )
 }
 
