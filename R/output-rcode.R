@@ -2,12 +2,12 @@
 
 library("htmltools")
 
-rmdContainer <- function(...) {
-  rmd <- HTML(as.character(tags$code(class = "language-md", ...)))
-  tags$div(tags$pre(rmd, style = "background-color: #FFFFFF;"))
+rcodeContainer <- function(...) {
+  rcode <- HTML(as.character(tags$code(class = "language-r", ...)))
+  tags$div(tags$pre(rcode, style = "background-color: #FFFFFF;"))
 }
 
-rmdHighlightDeps <- function() {
+rcodeHighlightDeps <- function() {
   src <- "www/highlight-rmarkdown/"
   tagList(
     singleton(list(
@@ -19,7 +19,7 @@ rmdHighlightDeps <- function() {
     )),
     tags$script(
       "Shiny.addCustomMessageHandler(
-           'highlight-rmd',
+           'highlight-rcode',
            function (message) {
                var id = message['id'];
                var delay = message['delay'];
@@ -36,21 +36,21 @@ rmdHighlightDeps <- function() {
   )
 }
 
-renderRmd <- function(expr, env = parent.frame(), quoted = FALSE, outputArgs = list(), delay = 100) {
+renderRcode <- function(expr, env = parent.frame(), quoted = FALSE, outputArgs = list(), delay = 100) {
   func <- exprToFunction(expr, env, quoted)
   renderFunc <- function(shinysession, name, ...) {
     value <- func()
     for (d in delay) {
-      shinysession$sendCustomMessage("highlight-rmd", list(id = name, delay = d))
+      shinysession$sendCustomMessage("highlight-rcode", list(id = name, delay = d))
     }
     return(paste(utils::capture.output(cat(value)), collapse = "\n"))
   }
-  markRenderFunction(rmdOutput, renderFunc, outputArgs = outputArgs)
+  markRenderFunction(rcodeOutput, renderFunc, outputArgs = outputArgs)
 }
 
-rmdOutput <- function(outputId) {
+rcodeOutput <- function(outputId) {
   tagList(
-    rmdHighlightDeps(),
-    uiOutput(outputId, container = rmdContainer)
+    rcodeHighlightDeps(),
+    uiOutput(outputId, container = rcodeContainer)
   )
 }

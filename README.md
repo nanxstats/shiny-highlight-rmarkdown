@@ -1,7 +1,12 @@
 # shiny-highlight-rmarkdown
 
-Offers `renderRmd()` and `rmdOutput()`:
-lightweight syntax highlighting for R Markdown output in Shiny.
+Offers `renderRmd()` and `rmdOutput()`: syntax highlighting for R Markdown
+output in Shiny using highlight.js.
+
+Also offers `renderRcode()` and `rcodeOutput()` for R code output
+syntax highlighting.
+
+You can use either one independently or use the two together.
 
 ## Demo
 
@@ -18,7 +23,7 @@ shiny::runGitHub("nanxstats/shiny-highlight-rmarkdown", ref = "main")
 - [shiny:::showcaseUI](https://github.com/rstudio/shiny/blob/master/R/showcase.R)
   and [codeModules::renderCode](https://github.com/statistikat/codeModules)
   offer an R syntax highlighting solution but do not support R Markdown.
-- Sometimes you want a lightweight R Markdown syntax highlighting solution
+- Sometimes you want a lightweight R or R Markdown syntax highlighting solution
   in Shiny that does not involve introducing dependencies such as `shinyAce`.
 
 ## How
