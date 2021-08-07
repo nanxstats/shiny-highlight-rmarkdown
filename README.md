@@ -6,7 +6,7 @@ lightweight syntax highlighting for R Markdown output in Shiny.
 ## Demo
 
 ```r
-shiny::runGitHub("nanxstats/shiny-highlight-rmarkdown")
+shiny::runGitHub("nanxstats/shiny-highlight-rmarkdown", ref = "main")
 ```
 
 ## Why
