@@ -12,10 +12,12 @@ rmdHighlightDeps <- function() {
   tagList(
     singleton(list(
       includeScript(file.path(src, "highlight.min.js")),
-      includeScript(file.path(src, "markdown.js")),
       includeScript(file.path(src, "r.js")),
-      includeScript(file.path(src, "yaml.min.js")),
       includeCSS(file.path(src, "highlight-theme.css"))
+    )),
+    singleton(list(
+      includeScript(file.path(src, "markdown.js")),
+      includeScript(file.path(src, "yaml.min.js"))
     )),
     singleton(list(
       tags$script(
