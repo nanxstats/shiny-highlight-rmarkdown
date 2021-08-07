@@ -10,7 +10,7 @@ ui <- fluidPage(
       textAreaInput(
         "rmd_in", label = NULL,
         width = "100%", height = "500px",
-        paste0(readLines("examples/html-vignette.Rmd"), collapse = "\n")
+        value = paste0(readLines("examples/html-vignette.Rmd"), collapse = "\n")
       )
     ),
     column(
@@ -22,7 +22,9 @@ ui <- fluidPage(
 
 server <- function(input, output) {
   output$rmd_out <- renderRmd({
-    input$rmd_in
+    # Escape the input ALL THE TIME to avoid potential security issues
+    # https://github.com/highlightjs/highlight.js/issues/2886
+    htmltools::htmlEscape(input$rmd_in)
   })
 }
 
