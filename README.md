@@ -5,6 +5,10 @@ lightweight syntax highlighting for R Markdown output in Shiny.
 
 ## Demo
 
+<https://nanx.shinyapps.io/shiny-highlight-rmarkdown/>
+
+or
+
 ```r
 shiny::runGitHub("nanxstats/shiny-highlight-rmarkdown", ref = "main")
 ```
@@ -12,7 +16,8 @@ shiny::runGitHub("nanxstats/shiny-highlight-rmarkdown", ref = "main")
 ## Why
 
 - [shiny:::showcaseUI](https://github.com/rstudio/shiny/blob/master/R/showcase.R)
-offers a syntax highlighting solution but does not support R Markdown.
+  and [codeModules::renderCode](https://github.com/statistikat/codeModules)
+  offer an R syntax highlighting solution but do not support R Markdown.
 - Sometimes you want a lightweight R Markdown syntax highlighting solution
   in Shiny that does not involve introducing dependencies such as `shinyAce`.
 
@@ -27,7 +32,8 @@ offers a syntax highlighting solution but does not support R Markdown.
     - Modified version of the Markdown language highlighter `markdown.min.js`
     - Modified version of the R language highlighter `r.min.js`
     - Original version of the YAML language highlighter `yaml.min.js`
-    - Modified version of `github.min.css` theme based on colors in [`rstudio.css`](https://github.com/rstudio/shiny/blob/master/inst/www/shared/highlight/rstudio.css)
+    - Modified version of `github.min.css` theme based on colors in
+      [`rstudio.css`](https://github.com/rstudio/shiny/blob/master/inst/www/shared/highlight/rstudio.css)
 
 ## License
 
