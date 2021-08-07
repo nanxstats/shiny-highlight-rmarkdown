@@ -4,7 +4,7 @@ library("htmltools")
 
 rmdContainer <- function(...) {
   rmd <- HTML(as.character(tags$code(class = "language-md", ...)))
-  tags$div(tags$pre(rmd, style = "background-color: #FFF;"))
+  tags$div(tags$pre(rmd, style = "background-color: #FFFFFF;"))
 }
 
 rmdHighlightDeps <- function() {
@@ -14,7 +14,7 @@ rmdHighlightDeps <- function() {
     includeScript(file.path(src, "markdown.js")),
     includeScript(file.path(src, "r.js")),
     includeScript(file.path(src, "yaml.min.js")),
-    includeCSS(file.path(src, "github.css")),
+    includeCSS(file.path(src, "highlight-theme.css")),
     tags$script(
       "Shiny.addCustomMessageHandler(
            'highlight-rmd',
