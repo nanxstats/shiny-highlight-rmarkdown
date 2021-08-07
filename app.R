@@ -10,7 +10,7 @@ ui <- fluidPage(
       textAreaInput(
         "rmd_in", label = NULL,
         width = "100%", height = "500px",
-        value = paste0(readLines("examples/html-vignette.Rmd"), collapse = "\n")
+        value = paste0(readLines("examples/example.Rmd"), collapse = "\n")
       )
     ),
     column(
