@@ -83,3 +83,8 @@ code.hljs {
   color: #b31d28;
   background-color: #ffeef0;
 }
+
+.hljs-link {
+  text-decoration: underline;
+  text-decoration-color: rgb(154, 154, 186);
+}
