@@ -11,9 +11,9 @@ rcodeHighlightDeps <- function() {
   src <- "www/highlight-rmarkdown/"
   tagList(
     singleton(list(
+      includeCSS(file.path(src, "highlight-theme.css")),
       includeScript(file.path(src, "highlight.min.js")),
-      includeScript(file.path(src, "r.js")),
-      includeCSS(file.path(src, "highlight-theme.css"))
+      includeScript(file.path(src, "r.js"))
     )),
     singleton(list(
       tags$script(
