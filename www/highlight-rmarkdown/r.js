@@ -1,4 +1,4 @@
-// Modified from highlight.js v11.2.0: r.min.js
+// Modified from https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/languages/r.min.js
 hljs.registerLanguage("r", (() => {
     "use strict"; function e(e) {
         return e ? "string" == typeof e ? e : e.source : null

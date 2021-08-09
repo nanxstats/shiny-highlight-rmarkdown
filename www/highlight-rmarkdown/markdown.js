@@ -1,4 +1,4 @@
-// Modified from highlight.js v11.2.0: markdown.min.js
+// Modified from https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/languages/markdown.min.js
 hljs.registerLanguage("markdown", (() => {
     "use strict"; function n(...n) {
         return n.map((n => {
