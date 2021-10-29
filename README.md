@@ -39,7 +39,7 @@ shiny::runGitHub("nanxstats/shiny-highlight-rmarkdown", ref = "main")
   - Original version of the YAML language highlighter `yaml.min.js`
   - Original version of the LaTeX language highlighter `latex.min.js`
   - Modified version of `github.min.css` theme based on colors in
-  - [`rstudio.css`](https://github.com/rstudio/shiny/blob/master/inst/www/shared/highlight/rstudio.css)
+    [`rstudio.css`](https://github.com/rstudio/shiny/blob/master/inst/www/shared/highlight/rstudio.css)
 
 ## License
 
