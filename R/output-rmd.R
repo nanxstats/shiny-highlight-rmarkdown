@@ -17,7 +17,8 @@ rmdHighlightDeps <- function() {
     )),
     singleton(list(
       includeScript(file.path(src, "markdown.js")),
-      includeScript(file.path(src, "yaml.min.js"))
+      includeScript(file.path(src, "yaml.min.js")),
+      includeScript(file.path(src, "latex.min.js"))
     )),
     singleton(list(
       tags$script(

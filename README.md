@@ -31,14 +31,15 @@ shiny::runGitHub("nanxstats/shiny-highlight-rmarkdown", ref = "main")
 > First, they take the dinglebop, and they smooth it out with a bunch of schleem.
 
 - R
-    - Modified from [codeModules::renderCode](https://github.com/statistikat/codeModules)
+  - Modified from [codeModules::renderCode](https://github.com/statistikat/codeModules)
 - JS/CSS
-    - highlight.js
-    - Modified version of the Markdown language highlighter `markdown.min.js`
-    - Modified version of the R language highlighter `r.min.js`
-    - Original version of the YAML language highlighter `yaml.min.js`
-    - Modified version of `github.min.css` theme based on colors in
-      [`rstudio.css`](https://github.com/rstudio/shiny/blob/master/inst/www/shared/highlight/rstudio.css)
+  - highlight.js
+  - Modified version of the Markdown language highlighter `markdown.min.js`
+  - Modified version of the R language highlighter `r.min.js`
+  - Original version of the YAML language highlighter `yaml.min.js`
+  - Original version of the LaTeX language highlighter `latex.min.js`
+  - Modified version of `github.min.css` theme based on colors in
+  - [`rstudio.css`](https://github.com/rstudio/shiny/blob/master/inst/www/shared/highlight/rstudio.css)
 
 ## License
 

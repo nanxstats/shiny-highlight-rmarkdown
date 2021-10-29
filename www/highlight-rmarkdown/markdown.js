@@ -28,6 +28,12 @@ hljs.registerLanguage("markdown", (() => {
                     excludeEnd: !0,
                     subLanguage: "r",
                     relevance: 2
+                },
+                {
+                    begin: /\s\$|\$\$/,
+                    end: /\$\s|\$\$/,
+                    subLanguage: "latex",
+                    relevance: 2
                 }
             ]
         },
