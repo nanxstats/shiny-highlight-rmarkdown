@@ -14,7 +14,7 @@ hljs.registerLanguage("r", (() => {
                     $pattern: s,
                     keyword: "function if in break next repeat else for while",
                     literal: "NULL NA TRUE FALSE Inf NaN NA_integer_|10 NA_real_|10 NA_character_|10 NA_complex_|10",
-                    built_in: ""
+                    built_in: "return switch try tryCatch stop warning require library attach detach source setMethod setGeneric setGroupGeneric setClass setRefClass R6Class UseMethod NextMethod"
                 }, contains: [a.COMMENT(/#'/, /$/, {
                     contains: [{
                         scope: "doctag", match: /@examples/,
